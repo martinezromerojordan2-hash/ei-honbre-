@@ -1,6 +1,7 @@
 for (let index = 0; index < 4; index++) {
     basic.showIcon(IconNames.StickFigure)
 }
+music.play(music.stringPlayable("C D E F G A B C5 ", 120), music.PlaybackMode.UntilDone)
 for (let index = 0; index < 4; index++) {
     basic.showIcon(IconNames.Sad)
 }
@@ -26,11 +27,12 @@ for (let index = 0; index < 4; index++) {
     basic.showIcon(IconNames.House)
     basic.showLeds(`
         . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
+        . # . # #
+        # # # . #
+        . # . . #
+        # . # . #
         `)
+    basic.showIcon(IconNames.Surprised)
 }
 basic.forever(function () {
 	
